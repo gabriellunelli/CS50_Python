@@ -6,7 +6,7 @@
 # .txt
 # .zip
 
-r = input('File name: ')
+r = input('File name: ').lower().strip()
 
 if r.endswith('.gif'):
     print('image/gif')
@@ -18,12 +18,12 @@ elif r.endswith('.png'):
     print('image/png')
 
 elif r.endswith('.pdf'):
-    print('docs/pdf')
+    print('application/pdf')
 
 elif r.endswith('.txt'):
-    print('docs/txt')
+    print('text/plain')
 
 elif r.endswith('.zip'):
-    print('compact/zip')
+    print('application/zip')
 else:
     print('application/octet-stream')
